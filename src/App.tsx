@@ -24,6 +24,9 @@ function App() {
         setRegion(event.target.value);
     }
 
+    // Admin Read with all buckets enabled
+    // Otherwise specify bucket in endpoint url/bucket-name
+    // or not idk
     const listObjectsInBucket = async () => {
         const command = new ListObjectsV2Command({
             Bucket: "event-snap-prod",
